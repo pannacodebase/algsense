@@ -36,3 +36,45 @@ To get started with AlgSense, clone the repository and follow the instructions i
 ```bash
 git clone https://github.com/yourusername/algsense.git
 cd algsense
+
+
+## Configuration
+
+The `config.py` file contains API keys and connection strings necessary for the AlgSense platform to function. Please ensure to replace the placeholder values with your actual API keys before running the application.
+
+```python
+# config.py
+
+# API keys for exclusive access
+ARIA_API_KEY = "YOUR_ARIA_API_KEY"
+ALLEGRO_API_KEY = "YOUR_ALLEGRO_API_KEY"
+DATABASE_BASE_URL = "sqlitecloud://YOUR_DATABASE_URL"
+# API Key for the database connection
+API_KEY = "YOUR_DATABASE_API_KEY"
+SERPER_API_KEY = "YOUR_SERPER_API_KEY"
+IMGBB_API_KEY = "YOUR_IMGBB_API_KEY"
+DEEPGRAM_API_KEY = "YOUR_DEEPGRAM_API_KEY"
+
+also note the libraries used
+Libraries Used
+The AlgSense platform utilizes the following Python libraries:
+
+blinker==1.7.0: Fast and simple signal library for event handling.
+click==8.1.7: Library for creating command-line interfaces.
+colorama==0.4.6: Easy colored text for terminal output.
+Flask==3.0.2: Lightweight web framework for developing web applications.
+itsdangerous==2.1.2: Secure cookie handling and security features.
+Jinja2==3.1.3: Templating engine for rendering HTML.
+MarkupSafe==2.1.5: Safe handling of HTML and XML strings.
+Werkzeug==3.0.1: Comprehensive WSGI web application library.
+requests: Powerful HTTP library for making API calls.
+wikipedia: Access and retrieve data from Wikipedia.
+Integrations
+AlgSense integrates with several APIs to enhance its functionality:
+
+Serper: For retrieving search results related to algal blooms.
+Rhymes (ARIA and Allegro): For generating relevant content and insights.
+Deepgram API: For speech-to-text capabilities, enabling voice interaction.
+Wikipedia: For fetching information directly from Wikipedia to enrich user content.
+
+
