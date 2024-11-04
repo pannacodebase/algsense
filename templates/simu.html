@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlgSense - Algal Blooms Monitoring</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='img/favicon/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='img/favicon/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='img/favicon/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ url_for('static', filename='img/favicon/site.webmanifest') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='img/favicon/favicon.ico') }}">
+    <link rel="icon" type="image/png" sizes="192x192" href="{{ url_for('static', filename='img/favicon/android-chrome-192x192.png') }}">
+    <link rel="icon" type="image/png" sizes="512x512" href="{{ url_for('static', filename='img/favicon/android-chrome-512x512.png') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Custom styling for sidebar */
+        #loadingIndicator {
+            display: none; /* Hidden by default */
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 999; /* Above all other content */
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        #sidebar {
+            min-width: 250px;
+            max-width: 250px;
+            height: calc(100vh - 56px - 50px); /* Adjust height based on navbar (56px) and footer (50px) */
+            background-color: #f8f9fa;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Space between content and fixed buttons */
+            padding: 20px;
+            overflow-y: auto; /* Enable vertical scrolling */
+            scrollbar-width: thin; /* For Firefox */
+            scrollbar-color: green transparent; /* For Firefox */
+        }
+
+        #sidebar::-webkit-scrollbar {
+            width: 8px; /* Width of the scrollbar */
+        }
+
+        #sidebar::-webkit-scrollbar-thumb {
+            background: green; /* Color of the scrollbar thumb */
+            border-radius: 4px; /* Rounded corners */
+        }
+
+        #sidebar::-webkit-scrollbar-track {
+            background: transparent; /* Background of the scrollbar track */
+        }
+
+        #promptOutput {
+            height: 300px;
+        }
+
+        /* Footer styling */
+        .footer {
+            background-color: #f8f9fa;
+            padding: 10px 0;
+            width: 100%;
+        }
+
+        .button-container {
+            /* Ensure buttons are at the bottom */
+            position: relative; 
+            bottom: 0; /* Stick to the bottom of the sidebar */
+            display: flex;
+            flex-direction: column;
+            gap: 10px; /* Space between buttons */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" role="navigation" aria-label="Main Navigation">
+        <a class="navbar-brand" href="#">
+            <img src="{{ url_for('static', filename='img/logo.png') }}" alt="AlgSense Logo" style="width: 150px; margin-right: 10px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('home') }}">Dashboard</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('converse') }}">AI Bots (Realtime)</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('simu') }}">Simulator</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('dataana') }}">Data Analysis</a></li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <div class="d-flex flex-grow-1">
+        <!-- Sidebar -->
+        <div id="sidebar" class="bg-light">
+            <h4>Parameter Setup</h4>
+            <!-- Form fields for each parameter -->
+            <form id="parameterForm">
+                <div class="form-group">
+                    <label for="algaeType">Algae Type</label>
+                    <select class="form-control" id="algaeType">
+                        <option value="">Select Algae Type</option>
+                        <option value="Chlorella">Chlorella</option>
+                        <option value="Spirulina">Spirulina</option>
+                        <option value="Phaeophyceae">Phaeophyceae</option>
+                        <option value="Cyanobacteria">Cyanobacteria</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="growthCondition">Growth Condition</label>
+                    <select class="form-control" id="growthCondition">
+                        <option value="">Select Growth Condition</option>
+                        <option value="Nutrient-rich">Nutrient-rich</option>
+                        <option value="Low Light">Low Light</option>
+                        <option value="High Temperature">High Temperature</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="waterType">Water Type</label>
+                    <select class="form-control" id="waterType">
+                        <option value="">Select Water Type</option>
+                        <option value="Freshwater">Freshwater</option>
+                        <option value="Saltwater">Saltwater</option>
+                        <option value="Brackish">Brackish</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="lightCondition">Light Condition</label>
+                    <select class="form-control" id="lightCondition">
+                        <option value="">Select Light Condition</option>
+                        <option value="Full Sunlight">Full Sunlight</option>
+                        <option value="Partial Shade">Partial Shade</option>
+                        <option value="Artificial Light">Artificial Light</option>
+                    </select>
+                </div>
+            </form>
+            <!-- Button container for fixed buttons -->
+            <div class="button-container">
+                <button type="button" class="btn btn-primary btn-block" onclick="generatePrompt()">Generate Prompt</button>
+                <button id="refineButton" class="btn btn-secondary btn-block" aria-label="Refine Parameters" disabled onclick="refineParameters()">Refine</button>
+                <button id="generateVideoButton" class="btn btn-success btn-block" aria-label="Generate Video" disabled>Generate Video</button>
+            </div>
+        </div>
+
+        <!-- Main content area for displaying the generated prompt -->
+        <div class="container p-4 flex-grow-1">
+            <!-- Tabs for managing the two steps -->
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="prompt-tab" data-toggle="tab" href="#prompt" role="tab" aria-controls="prompt" aria-selected="true">Prompt Setup</a>
+                </li>
+            </ul>
+            <div id="loadingIndicator">
+                Loading... Please wait.
+            </div>
+                        <div class="tab-content" id="myTabContent">
+                <!-- Tab 1: Prompt Setup -->
+                <div class="tab-pane fade show active" id="prompt" role="tabpanel" aria-labelledby="prompt-tab">
+                    <h4>Generated Prompt</h4>
+                    <textarea id="promptOutput" class="form-control" readonly></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer text-center">
+        <div class="container">
+            <span class="text-muted">© 2024 AlgSense | Algal Blooms Monitoring</span>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS, Popper.js, jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function generatePrompt() {
+            // Get values from form inputs
+            const algaeType = document.getElementById('algaeType').value;
+            const growthCondition = document.getElementById('growthCondition').value;
+            const waterType = document.getElementById('waterType').value;
+            const lightCondition = document.getElementById('lightCondition').value;
+
+            // Construct the prompt string
+            const prompt = `Algae Type: ${algaeType}, Growth Condition: ${growthCondition}, Water Type: ${waterType}, Light Condition: ${lightCondition}`;
+
+            // Output the prompt to the textarea
+            const promptOutput = document.getElementById('promptOutput');
+            promptOutput.value = prompt;
+
+            // Enable the refine and generate video buttons
+            document.getElementById('refineButton').disabled = false;
+            document.getElementById('generateVideoButton').disabled = false;
+        }
+        
+        function refineParameters() {
+            const prompt = document.getElementById('parameterForm').elements['algaeType'].value; // You might want to gather the complete input for the prompt
+        
+            // Prepare the data to send
+            const data = { prompt: prompt };
+        
+            fetch('/refine', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 'success') {
+                    // Update the textarea with ariaResponse
+                    document.getElementById('promptOutput').value = data.ariaResponse;
+                } else {
+                    console.error('Error:', data.message);
+                }
+            })
+            .catch(error => console.error('Error:', error));
+        }
+        
+        
+        
+
+// Function to generate video with analysis results
+function generateVideo() {
+    console.log("Generate video button clicked");
+    
+    // Retrieve the stored analysis results from local storage
+    const storedResults = localStorage.getItem('analysisResults');
+    if (storedResults) {
+        const analysisResults = JSON.parse(storedResults); // Parse the results back to an object
+        const refinedPrompt = analysisResults.join(', '); // Create a single prompt from results
+        
+        // Call the backend to generate the video
+        fetch('/generate_video', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ prompt: refinedPrompt })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.status === "success") {
+                alert(`Video generation successful. Video link will open in a new tab.`);
+                
+                // Open the video in a new tab
+                window.open(data.request_id, '_blank'); // Assuming request_id contains the video URL
+            } else {
+                alert(`Error: ${data.message}`);
+            }
+        })
+        .catch(error => {
+            console.error("Error:", error);
+            alert("An error occurred while generating the video.");
+        });
+    } else {
+        alert("No analysis results available.");
+    }
+}
+
+// Event listener for the ge
+document.getElementById('generateVideoButton').addEventListener('click', generateVideo);
+
+        function checkVideoStatus(requestId) {
+            const intervalId = setInterval(() => {
+                fetch(`/query_video_status?request_id=${requestId}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.status === 'success' && data.video_link) {
+                        clearInterval(intervalId); // Stop polling
+                        // Hide loading indicator
+                        document.getElementById('loadingIndicator').style.display = 'none';
+                        // Show the video link or embed the video in the UI
+                        alert('Video generated successfully! Link: ' + data.video_link);
+                    } else if (data.status === 'error') {
+                        clearInterval(intervalId); // Stop polling
+                        alert('Error: ' + data.message);
+                        document.getElementById('loadingIndicator').style.display = 'none'; // Hide loading indicator
+                    }
+                });
+            }, 5000); // Poll every 5 seconds
+        }
+</script>
+</body>
+</html>

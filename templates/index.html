@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlgSense - Algal Blooms Monitoring</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='img/favicon/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='img/favicon/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='img/favicon/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ url_for('static', filename='img/favicon/site.webmanifest') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='img/favicon/favicon.ico') }}">
+    <link rel="icon" type="image/png" sizes="192x192" href="{{ url_for('static', filename='img/favicon/android-chrome-192x192.png') }}">
+    <link rel="icon" type="image/png" sizes="512x512" href="{{ url_for('static', filename='img/favicon/android-chrome-512x512.png') }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo" style="width: 150px; margin-right: 10px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('home') }}">Dashboard</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('converse') }}">AI Bots (Realtime)</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('simu') }}">Simulator</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('dataana') }}">Data Analysis</a></li>
+                <li class="nav-item">
+                    <style>
+                        #avatar {
+                            border-radius: 90%;
+                            border: 1px solid blue;
+                            position: absolute;
+                            right: 10px;                /* Adjust to align as desired */
+                            top: 10px;                  /* Adjust the vertical alignment as needed */
+                        }
+                        
+                    </style>
+                    <img src="{{ url_for('static', filename='img/avatar.jpg') }}" height="60px" alt="Avatar" class="avatar" id="avatar">
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Full-Screen Map -->
+    <div id="map-container"></div>
+
+    <!-- Footer -->
+    <footer class="bg-light text-center fixed-bottom">
+        <p>© 2024 HAB Monitoring | Your source for algal bloom data and alerts.</p>
+    </footer>
+
+    <!-- Floating Chat Icon and Chat Box -->
+    <div class="chat-button" onclick="toggleChatBox()">💬</div>
+    <div class="chat-box" id="chatBox">
+        <div class="chat-box-header">
+            Chat with Us
+        </div>
+        <div class="chat-box-body" id="chatBoxBody">
+            <p>Hi there! How can I assist you?</p>
+        </div>
+        <div class="chat-box-footer">
+            <input type="text" class="chat-input" id="chatInput" placeholder="Type a message...">
+        </div>
+    </div>
+
+    <!-- Leaflet JS and custom script -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="{{ url_for('static', filename='js/map.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Script to toggle chat box visibility and handle chat input -->
+    <script>
+        const initialMarkers = {{ markers | tojson }};
+        addMarkersToMap(initialMarkers);
+    </script>
+    <script>
+        document.getElementById('avatar').addEventListener('click', function() {
+            fetch('/fetch_news')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.summary) {
+                        const text = data.summary;
+                        // Use Deepgram API to convert text to speech
+                        fetch('https://api.deepgram.com/v1/speak?model=aura-asteria-en', {
+                            method: 'POST',
+                            headers: {
+                                'Authorization': 'Token eab7bf4c5b8f491e9b93ab34313598c4a3b71392', // Replace with your actual Deepgram API key
+                                'Content-Type': 'text/plain',
+                            },
+                            body: text  // Send the text directly as plain text
+                        })
+                        .then(response => {
+                            if (!response.ok) {
+                                throw new Error('Network response was not ok');
+                            }
+                            return response.blob();  // Get the audio file as a Blob
+                        })
+                        .then(audioBlob => {
+                            const audioUrl = URL.createObjectURL(audioBlob); // Create a URL for the Blob
+                            const audio = new Audio(audioUrl);
+                            audio.play();  // Play the audio
+                        })
+                        .catch(error => console.error('Error playing audio:', error));
+                    }
+                })
+                .catch(error => console.error('Error fetching news summary:', error));
+        });
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlgSense - Algal Blooms Monitoring</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='img/favicon/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='img/favicon/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='img/favicon/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ url_for('static', filename='img/favicon/site.webmanifest') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='img/favicon/favicon.ico') }}">
+    <link rel="icon" type="image/png" sizes="192x192" href="{{ url_for('static', filename='img/favicon/android-chrome-192x192.png') }}">
+    <link rel="icon" type="image/png" sizes="512x512" href="{{ url_for('static', filename='img/favicon/android-chrome-512x512.png') }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        body {
+            background-color: #f8f9fa; /* Light background for contrast */
+            font-family: Arial, sans-serif;
+        }
+        .avatar-container {
+            display: inline-block;
+            position: relative;
+            margin: 20px; /* Increased margin for better spacing */
+        }
+        .avatar {
+            width: 100px; /* Larger avatar size */
+            height: 100px; /* Maintain aspect ratio */
+            border-radius: 50%; /* Makes the image circular */
+            cursor: pointer; /* Changes cursor to pointer on hover */
+            border: 3px solid transparent; /* Default border */
+            transition: border-color 0.3s; /* Smooth transition for border color */
+        }
+        .avatar.girl {
+            background-color: #ffccff; /* Light pink background for girls */
+        }
+        .avatar.boy {
+            background-color: #ccf2ff; /* Light blue background for boys */
+        }
+        .avatar:hover {
+            border-color: #007bff; /* Change border color on hover */
+        }
+        .speaking {
+            outline: 3px solid blue; /* Blue circle around the avatar */
+        }
+        .conversation {
+            text-align: center; /* Center the conversation section */
+            margin: 50px 0; /* Add margin above and below */
+        }
+        #start-chat {
+            background-color: #28a745; /* Green button */
+            color: white; /* White text */
+            border: none; /* Remove default border */
+            padding: 10px 20px; /* Increase padding for a larger button */
+            font-size: 16px; /* Increase font size */
+            border-radius: 5px; /* Rounded corners */
+            transition: background-color 0.3s; /* Smooth transition for background color */
+        }
+        #start-chat:hover {
+            background-color: #218838; /* Darker green on hover */
+        }
+        .transcript {
+            max-width: 600px; /* Limit transcript width */
+            height: 200px; /* Set a fixed height for the transcript */
+            margin: 20px auto; /* Center transcript area */
+            padding: 10px; /* Padding around transcript */
+            border-radius: 10px; /* Rounded corners */
+            background-color: #fff; /* White background */
+            border: 2px solid blue; /* Blue border */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow */
+            overflow-y: auto; /* Enable vertical scrolling */
+        }
+        
+        .girl-text {
+            background-color: #ffccff; /* Light pink background for girl's text */
+            padding: 5px;
+            border-radius: 5px;
+            margin: 5px 0;
+        }
+        .boy-text {
+            background-color: #ccf2ff; /* Light blue background for boy's text */
+            padding: 5px;
+            border-radius: 5px;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" role="navigation" aria-label="Main Navigation">
+        <a class="navbar-brand" href="#">
+            <img src="{{ url_for('static', filename='img/logo.png') }}" alt="AlgSense Logo" style="width: 150px; margin-right: 10px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('home') }}">Dashboard</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('converse') }}">AI Bots (Realtime)</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('simu') }}">Simulator</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('dataana') }}">Data Analysis</a></li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="container mt-5" role="main">
+        <div class="text-center">
+            <h1>AlgSense: Let Our AI Crew Guide You Through Algal Blooms!
+            </h1>
+        </div>
+
+        <section class="conversation" aria-labelledby="avatars-chat">
+            <div class="text-center">
+                <div class="avatar-container" id="aura-hera-en">
+                    <img src="{{ url_for('static', filename='img/avatar1.jpg') }}" alt="Avatar 1" class="avatar girl">
+                </div>
+                <div class="avatar-container" id="aura-orion-en">
+                    <img src="{{ url_for('static', filename='img/avatar2.jpg') }}" alt="Avatar 2" class="avatar boy">
+                </div>
+                <div class="avatar-container" id="aura-luna-en">
+                    <img src="{{ url_for('static', filename='img/avatar3.jpg') }}" alt="Avatar 3" class="avatar girl">
+                </div>
+                <div class="avatar-container" id="aura-orpheus-en">
+                    <img src="{{ url_for('static', filename='img/avatar4.jpg') }}" alt="Avatar 4" class="avatar boy">
+                </div>
+                <div class="avatar-container" id="aura-arcas-en">
+                    <img src="{{ url_for('static', filename='img/avatar5.jpg') }}" alt="Avatar 5" class="avatar boy">
+                </div>
+            </div>
+            <button id="start-chat" class="btn mt-4">Start Chat</button>
+        </section>
+
+        <!-- Transcript Section -->
+        <div class="transcript" id="transcript"></div>
+    </main>
+<script>
+    document.getElementById('start-chat').addEventListener('click', function() {
+        const conversation = [
+            { avatar: 'aura-hera-en', gender: 'girl', text: "Hey there, everyone! Buckle up, because we’re diving into the wild world of algal blooms! I mean, who knew algae could throw such a wild party?" },
+            { avatar: 'aura-orion-en', gender: 'boy', text: "Hold up, Hera! Algal blooms? Are they like flowers that suddenly decide to go rave mode? Like, do they have glow sticks?" },
+            { avatar: 'aura-hera-en', gender: 'girl', text: "Oh, Orion, if only! No glow sticks here. An algal bloom is when algae go from chill to overdrive in the water, turning everything into a psychedelic swirl of colors! Think of it as Mother Nature's weird way of throwing a rave!" },
+            { avatar: 'aura-luna-en', gender: 'girl', text: "Whoa! But what makes them party so hard? Is it a warm weather thing or do they just love a good time?" },
+            { avatar: 'aura-hera-en', gender: 'girl', text: "Spot on, Luna! They thrive on warmth and nutrients, like they’re on an all-you-can-eat buffet! And, surprise surprise, pollution just makes them dance harder! It’s like a party where no one knows when to stop!" },
+            { avatar: 'aura-orpheus-en', gender: 'boy', text: "Oh no! So these algae party crashers can mess with our aquatic friends and us, right? Like, what if I try to do the backstroke and end up with a mouthful of toxic soup?" },
+            { avatar: 'aura-hera-en', gender: 'girl', text: "Bingo! They can make the water toxic, and if you swallow or swim in it, you might end up feeling worse than after eating a suspicious taco at 2 AM!" },
+            { avatar: 'aura-arcas-en', gender: 'boy', text: "Yikes! So how do we put an end to this algae rave? Can we crash their party or something?" },
+            { avatar: 'aura-hera-en', gender: 'girl', text: "Well, to stop their wild antics, we need to chill with the pollution and stop over-fertilizing our gardens! It's like sending them an invitation to a silent disco instead!" },
+            { avatar: 'aura-orpheus-en', gender: 'boy', text: "Got it! Thanks, Hera! I’ll spread the word to my friends: less fertilizer, more chill vibes!" },
+            { avatar: 'aura-hera-en', gender: 'girl', text: "You’re on the right track! Let’s all do our part to keep our waters clean and make sure Mother Nature doesn’t lose her cool!" }
+                            
+        ];
+        
+        let currentIndex = 0;
+
+        function highlightAvatar(avatarId, highlight) {
+            const avatarElement = document.getElementById(avatarId);
+            if (highlight) {
+                avatarElement.querySelector('.avatar').classList.add('speaking');
+                const gender = conversation.find(item => item.avatar === avatarId).gender;
+                console.log(`${gender.charAt(0).toUpperCase() + gender.slice(1)} avatar is speaking: ${avatarId}`);
+            } else {
+                avatarElement.querySelector('.avatar').classList.remove('speaking');
+            }
+        }
+
+        function populateTranscript(gender, text) {
+            const genderClass = gender === 'girl' ? 'girl-text' : 'boy-text';
+            const transcriptEntry = `<div class="${genderClass}">${text}</div>`;
+            document.getElementById('transcript').innerHTML += transcriptEntry;
+        }
+
+        function playNext() {
+            if (currentIndex < conversation.length) {
+                const currentAvatarId = conversation[currentIndex].avatar;
+                const { gender, text } = conversation[currentIndex];
+                
+                highlightAvatar(currentAvatarId, true);
+                
+                // Populate the transcript
+                populateTranscript(gender, text);
+
+                // Play the text using the TTS function
+                speakText(text, currentAvatarId)
+                    .then(() => {
+                        highlightAvatar(currentAvatarId, false);
+                        currentIndex++;
+                        playNext(); // Play the next message after the current one finishes
+                    });
+            }
+        }
+
+        playNext(); // Start the conversation
+    });
+
+    function speakText(text, model) {
+        return fetch(`https://api.deepgram.com/v1/speak?model=${model}`, {
+            method: 'POST',
+            headers: {
+                'Authorization': 'Token eab7bf4c5b8f491e9b93ab34313598c4a3b71392', // Replace with your actual Deepgram API key
+                'Content-Type': 'text/plain',
+            },
+            body: text
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.blob();
+        })
+        .then(audioBlob => {
+            const audioUrl = URL.createObjectURL(audioBlob);
+            const audio = new Audio(audioUrl);
+            audio.playbackRate = 1; // Set playback speed to 1.5x for faster playback
+            
+            return new Promise((resolve) => {
+                audio.onended = () => resolve(); // Resolve the promise when the audio ends
+                audio.play();
+            });
+        })
+        .catch(error => console.error('Error playing audio:', error));
+    }
+// Function to fetch the transcript
+// Function to fetch the transcript
+// Function to fetch the transcript and extract records to an array
+// Function to fetch the transcript and extract records to an array
+async function fetchTranscript() {
+    try {
+        const response = await fetch('/algal-bloom-transcript');
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        
+        const data = await response.json();
+
+        // Check if data.transcript exists and is an array
+        if (data.transcript && Array.isArray(data.transcript)) {
+            const records = data.transcript; // Directly assigning the transcript to records
+
+            // Print each record in the array
+            records.forEach(record => {
+            });
+
+            // Log the entire records array
+            console.log('Records Array:', records);
+        } else {
+            console.error('Expected data.transcript to be an array, but got:', data.transcript);
+        }
+
+    } catch (error) {
+        console.error('There was a problem with the fetch operation:', error);
+    }
+}
+
+// Call the function to fetch the transcript
+fetchTranscript();
+
+</script>
+            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

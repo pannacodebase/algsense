@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlgSense - Algal Blooms Monitoring</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='img/favicon/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='img/favicon/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='img/favicon/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ url_for('static', filename='img/favicon/site.webmanifest') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='img/favicon/favicon.ico') }}">
+    <link rel="icon" type="image/png" sizes="192x192" href="{{ url_for('static', filename='img/favicon/android-chrome-192x192.png') }}">
+    <link rel="icon" type="image/png" sizes="512x512" href="{{ url_for('static', filename='img/favicon/android-chrome-512x512.png') }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        /* Custom styles for layout */
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .content {
+            display: flex;
+            flex: 1; /* Take the remaining space between navbar and footer */
+            overflow: hidden; /* Prevent overflow */
+            position: relative; /* Position relative to allow absolute positioning of children */
+        }
+
+        .sidebar {
+            width: 250px; /* Set sidebar width */
+            background-color: #f8f9fa; /* Sidebar background color */
+            padding: 15px; /* Sidebar padding */
+            overflow-y: auto; /* Allow scrolling if content overflows */
+            z-index:3000;
+        }
+
+        .image-container {
+            flex: 1; /* Take the remaining width */
+            position: relative;
+            overflow: hidden;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        .heatmap {
+            position: absolute;
+            bottom: 0; /* Align to the bottom */
+            left: 0;
+            width: 100%;
+            height: 40%; /* Set to cover bottom 40% */
+            pointer-events: none; /* Allows clicking through to the image */
+        }
+
+        .top-right-card {
+            position: absolute; /* Positioning it absolutely */
+            top: 20px; /* Adjust as needed */
+            right: 20px; /* Adjust as needed */
+            z-index: 5000; /* Bring it to the front */
+            width: 500px; /* Width of the card */
+            /* Optional styles for the card */
+            background-color: white; /* Background color */
+            font-size: 11px;
+            border: 1px solid #dee2e6; /* Border for the card */
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Shadow effect */
+        }
+
+        footer {
+            background-color: #f8f9fa; /* Footer background color */
+            padding: 10px; /* Footer padding */
+        }
+
+        .slider-label {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo" style="width: 150px; margin-right: 10px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('home') }}">Dashboard</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('converse') }}">AI Bots (Realtime)</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('simu') }}">Simulator</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('dataana') }}">Data Analysis</a></li>
+                <li class="nav-item">
+                    <img src="{{ url_for('static', filename='img/avatar.jpg') }}" height="60px" alt="Avatar" class="avatar" id="avatar" style="border-radius: 90%; border: 1px solid blue; position: absolute; right: 10px; top: 10px;">
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <div class="content">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="card mb-3">
+                <div class="card-header">
+                    Nutritional Factors
+                </div>
+                <div class="card-body">
+                    <label class="slider-label" for="nitrogen">Nitrogen (N):</label>
+                    <input type="range" id="nitrogen" min="0" max="100" value="50" class="slider"><br>
+                    <label class="slider-label" for="phosphorus">Phosphorus (P):</label>
+                    <input type="range" id="phosphorus" min="0" max="100" value="50" class="slider"><br>
+                    <label class="slider-label" for="macronutrients">Macronutrients:</label>
+                    <input type="range" id="macronutrients" min="0" max="100" value="50" class="slider"><br>
+                </div>
+            </div>
+
+            <div class="card mb-3">
+                <div class="card-header">
+                    Environmental Factors
+                </div>
+                <div class="card-body">
+                    <label class="slider-label" for="light">Light Intensity:</label>
+                    <input type="range" id="light" min="0" max="100" value="50" class="slider"><br>
+                    <label class="slider-label" for="temperature">Temperature:</label>
+                    <input type="range" id="temperature" min="0" max="100" value="50" class="slider"><br>
+                    <label class="slider-label" for="ph">pH Levels:</label>
+                    <input type="range" id="ph" min="0" max="14" value="7" class="slider"><br>
+                </div>
+            </div>
+
+            <div class="card mb-3">
+                <div class="card-header">
+                    Biological Factors
+                </div>
+                <div class="card-body">
+                    <label class="slider-label" for="competition">Competition:</label>
+                    <input type="range" id="competition" min="0" max="100" value="50" class="slider"><br>
+                    <label class="slider-label" for="grazing">Grazing Pressure:</label>
+                    <input type="range" id="grazing" min="0" max="100" value="50" class="slider"><br>
+                </div>
+            </div>
+            <button id="generate-insights" class="btn btn-primary">Generate Insights</button>
+
+        </div>
+
+        <!-- Image Section -->
+        <div class="image-container">
+            <img src="{{ url_for('static', filename='img/lake.jpg') }}" alt="Lake">
+            <canvas id="heatmap" class="heatmap"></canvas>
+
+            <!-- New Card on Top Right -->
+            <div class="top-right-card card">
+                <div class="card-header">Additional Information</div>
+                <div class="card-body">
+                    <p>Move the sliders and hit generate to populate the card.</p>
+                    <!-- Add any relevant content here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <p>© 2024 HAB Monitoring | Your source for algal bloom data and alerts.</p>
+    </footer>
+    
+    <script>
+        const canvas = document.getElementById('heatmap');
+        const ctx = canvas.getContext('2d');
+        const img = document.querySelector('.image-container img');
+    
+        // Wait for the image to load before drawing
+        img.onload = function() {
+            canvas.width = img.width;
+            canvas.height = img.height; // Use full height
+            drawHeatmap(); // Draw heatmap after image loads
+        };
+    
+        // Function to draw heatmap based on slider values
+        function drawHeatmap() {
+            const nitrogen = parseFloat(document.getElementById('nitrogen').value);
+            const phosphorus = parseFloat(document.getElementById('phosphorus').value);
+            const light = parseFloat(document.getElementById('light').value);
+            const temperature = parseFloat(document.getElementById('temperature').value);
+            const ph = parseFloat(document.getElementById('ph').value);
+            const competition = parseFloat(document.getElementById('competition').value);
+            const grazing = parseFloat(document.getElementById('grazing').value);
+    
+            // Clear the canvas
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+    
+            // Generate heatmap based on sliders
+            for (let x = 0; x < canvas.width; x++) {
+                for (let y = 0; y < canvas.height; y++) {
+                    const colorValue = (nitrogen + phosphorus + light + temperature + ph + competition + grazing) / 7;
+                    const color = `rgba(0, 255, 0, ${colorValue / 100})`; // Example logic for color based on values
+                    ctx.fillStyle = color;
+                    ctx.fillRect(x, y, 1, 1);
+                }
+            }
+        }
+    
+        // Event listeners for sliders
+        const sliders = document.querySelectorAll('.slider');
+        sliders.forEach(slider => {
+            slider.addEventListener('input', drawHeatmap);
+        });
+        // Generate Insights Button Click Event
+        document.getElementById('generate-insights').addEventListener('click', function() {
+            const insightsData = {
+                nitrogen: document.getElementById('nitrogen').value,
+                phosphorus: document.getElementById('phosphorus').value,
+                light: document.getElementById('light').value,
+                temperature: document.getElementById('temperature').value,
+                ph: document.getElementById('ph').value,
+                competition: document.getElementById('competition').value,
+                grazing: document.getElementById('grazing').value
+            };
+    
+            // Send data to backend
+            fetch('/insights', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(insightsData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 'success') {
+                    const cardBody = document.querySelector('.top-right-card .card-body');
+                    cardBody.innerHTML = data.ariaResponse;
+                } else {
+                    console.error('Error:', data.message);
+                }
+            })
+            .catch(error => console.error('Error:', error));
+        });
+    
+    
+    </script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

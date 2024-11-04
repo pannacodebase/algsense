@@ -1,0 +1,108 @@
+body, html {
+    margin: 0;
+    height: 95%;
+}
+
+#map-container {
+    height: calc(95vh - 58px); /* Full height minus the navbar height */
+    width: 100%;
+}
+    /* CSS to adjust the width of the card containing the tabs */
+    #myTabContent {
+        width: 200px; /* Set a fixed width or use percentage, e.g., 80% */
+        min-width: 300px; /* Minimum width to avoid being too narrow */
+    }
+
+    /* Optional: Adjust the overall card style if needed */
+    .card {
+        width: auto; /* Set to auto if you want it to expand based on content */
+        max-width: 400px; /* Optional: Limit the maximum width */
+    }
+
+/* Fixed footer with reduced height */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 5px 0;
+    font-size: 0.8rem;
+}
+
+/* Navbar link color */
+.navbar-nav .nav-link {
+    color: blue;
+}
+
+.navbar-nav .nav-link:hover {
+    color: darkblue;
+}
+.chat-button {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    background-color: #348D33; /* Darker green */
+    color: white;
+    font-size: 24px;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.chat-box {
+    display: none;
+    position: fixed;
+    bottom: 140px;
+    right: 20px;
+    width: 300px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 500;
+}
+
+.chat-box-header {
+    background-color: #348D33; /* Darker green */
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.chat-box-body {
+    max-height: 200px; /* Keep the maximum height */
+    overflow-y: auto;  /* Allow vertical scrolling */
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 4px; /* Rounded corners for aesthetics */
+}
+
+/* Custom scrollbar styles */
+.chat-box-body::-webkit-scrollbar {
+    width: 8px; /* Set the width of the scrollbar */
+}
+
+.chat-box-body::-webkit-scrollbar-thumb {
+    background-color: #9CC731; /* Light green for scrollbar thumb */
+    border-radius: 10px; /* Round the scrollbar thumb */
+}
+
+.chat-box-body::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Track color */
+    border-radius: 10px; /* Round the track */
+}
+
+.chat-box-footer {
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.chat-input {
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    padding: 5px;
+}

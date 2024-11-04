@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World with p5.js</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+</head>
+<body>
+
+<script>
+    let lakeImage; // Variable to hold the image
+
+    function preload() {
+        // Load the lake image
+        lakeImage = loadImage('lake.jpg');
+    }
+
+    function setup() {
+        createCanvas(windowWidth, windowHeight); // Create a canvas that covers the entire window
+        textAlign(CENTER, CENTER); // Center the text
+        textSize(48); // Set the text size
+        fill(255); // Set the text color to white
+    }
+
+    function draw() {
+        // Draw the lake image
+        image(lakeImage, 0, 0, width, height); // Draw the image to cover the entire canvas
+        
+        // Display the "Hello World" text
+        text('Hello World', width / 2, height / 2); // Draw text in the center of the canvas
+    }
+
+    // Resize the canvas when the window is resized
+    function windowResized() {
+        resizeCanvas(windowWidth, windowHeight);
+    }
+</script>
+
+</body>
+</html>

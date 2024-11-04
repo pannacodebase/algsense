@@ -1,0 +1,386 @@
+2024-11-02 20:06:41,908 - DEBUG - Starting new HTTPS connection (1): ccg8bpswnk.sqlite.cloud:8090
+2024-11-02 20:06:42,607 - DEBUG - https://ccg8bpswnk.sqlite.cloud:8090 "POST /v2/weblite/sql HTTP/11" 200 361
+2024-11-02 20:06:42,611 - DEBUG - Starting new HTTPS connection (1): ccg8bpswnk.sqlite.cloud:8090
+2024-11-02 20:06:43,398 - DEBUG - https://ccg8bpswnk.sqlite.cloud:8090 "POST /v2/weblite/sql HTTP/11" 200 364
+2024-11-02 20:06:43,437 - WARNING -  * Debugger is active!
+2024-11-02 20:06:43,450 - INFO -  * Debugger PIN: 623-743-118
+2024-11-02 20:07:12,013 - INFO -  * Detected change in 'C:\\arvind\\code\\pyqt5\\aa\\app.py', reloading
+2024-11-02 20:07:12,022 - INFO -  * Detected change in 'C:\\arvind\\code\\pyqt5\\aa\\app.py', reloading
+2024-11-02 20:07:12,280 - INFO -  * Detected change in 'C:\\arvind\\code\\pyqt5\\aa\\app.py', reloading
+2024-11-02 20:07:12,284 - INFO -  * Detected change in 'C:\\arvind\\code\\pyqt5\\aa\\app.py', reloading
+2024-11-02 20:07:12,520 - INFO -  * Detected change in 'C:\\arvind\\code\\pyqt5\\aa\\app.py', reloading
+2024-11-02 20:07:12,521 - INFO -  * Detected change in 'C:\\arvind\\code\\pyqt5\\aa\\app.py', reloading
+2024-11-02 20:07:12,522 - INFO -  * Detected change in 'C:\\arvind\\code\\pyqt5\\aa\\app.py', reloading
+2024-11-02 20:07:14,853 - DEBUG - Starting new HTTPS connection (1): ccg8bpswnk.sqlite.cloud:8090
+2024-11-02 20:07:15,623 - DEBUG - https://ccg8bpswnk.sqlite.cloud:8090 "POST /v2/weblite/sql HTTP/11" 200 361
+2024-11-02 20:07:15,627 - DEBUG - Starting new HTTPS connection (1): ccg8bpswnk.sqlite.cloud:8090
+2024-11-02 20:07:16,355 - DEBUG - https://ccg8bpswnk.sqlite.cloud:8090 "POST /v2/weblite/sql HTTP/11" 200 365
+2024-11-02 20:07:16,414 - WARNING -  * Debugger is active!
+2024-11-02 20:07:16,429 - INFO -  * Debugger PIN: 623-743-118
+2024-11-02 20:07:19,845 - DEBUG - Starting new HTTPS connection (1): ccg8bpswnk.sqlite.cloud:8090
+2024-11-02 20:07:20,593 - DEBUG - https://ccg8bpswnk.sqlite.cloud:8090 "POST /v2/weblite/sql HTTP/11" 200 4941
+2024-11-02 20:07:20,641 - INFO - 127.0.0.1 - - [02/Nov/2024 20:07:20] "GET / HTTP/1.1" 200 -
+2024-11-02 20:07:21,386 - INFO - 127.0.0.1 - - [02/Nov/2024 20:07:21] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-11-02 20:07:21,409 - INFO - 127.0.0.1 - - [02/Nov/2024 20:07:21] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+2024-11-02 20:07:21,447 - INFO - 127.0.0.1 - - [02/Nov/2024 20:07:21] "[36mGET /static/js/map.js HTTP/1.1[0m" 304 -
+2024-11-02 20:07:21,459 - INFO - 127.0.0.1 - - [02/Nov/2024 20:07:21] "[36mGET /static/js/chat.js HTTP/1.1[0m" 304 -
+2024-11-02 20:07:21,601 - INFO - 127.0.0.1 - - [02/Nov/2024 20:07:21] "[36mGET /static/js/overview.js HTTP/1.1[0m" 304 -
+2024-11-02 20:07:21,603 - INFO - 127.0.0.1 - - [02/Nov/2024 20:07:21] "[36mGET /static/js/images.js HTTP/1.1[0m" 304 -
+2024-11-02 20:07:21,604 - INFO - 127.0.0.1 - - [02/Nov/2024 20:07:21] "[36mGET /static/js/video.js HTTP/1.1[0m" 304 -
+2024-11-02 20:07:21,974 - INFO - 127.0.0.1 - - [02/Nov/2024 20:07:21] "[36mGET /static/img/algae.png HTTP/1.1[0m" 304 -
+2024-11-02 20:07:22,570 - INFO - 127.0.0.1 - - [02/Nov/2024 20:07:22] "[36mGET /static/img/favicon/favicon.ico HTTP/1.1[0m" 304 -
+2024-11-02 20:07:22,593 - INFO - 127.0.0.1 - - [02/Nov/2024 20:07:22] "[36mGET /static/img/favicon/site.webmanifest HTTP/1.1[0m" 304 -
+2024-11-02 20:07:24,454 - DEBUG - Starting new HTTPS connection (1): google.serper.dev:443
+2024-11-02 20:07:25,630 - DEBUG - https://google.serper.dev:443 "POST /search HTTP/11" 200 5861
+2024-11-02 20:07:25,654 - DEBUG - Starting new HTTP connection (1): en.wikipedia.org:80
+2024-11-02 20:07:25,763 - DEBUG - http://en.wikipedia.org:80 "GET /w/api.php?list=search&srprop=&srlimit=1&limit=1&srsearch=Poland&srinfo=suggestion&format=json&action=query HTTP/11" 301 0
+2024-11-02 20:07:25,764 - DEBUG - Starting new HTTPS connection (1): en.wikipedia.org:443
+2024-11-02 20:07:26,270 - DEBUG - https://en.wikipedia.org:443 "GET /w/api.php?list=search&srprop=&srlimit=1&limit=1&srsearch=Poland&srinfo=suggestion&format=json&action=query HTTP/11" 200 196
+2024-11-02 20:07:26,274 - DEBUG - Starting new HTTP connection (1): en.wikipedia.org:80
+2024-11-02 20:07:26,360 - DEBUG - http://en.wikipedia.org:80 "GET /w/api.php?prop=info%7Cpageprops&inprop=url&ppprop=disambiguation&redirects=&titles=plant&format=json&action=query HTTP/11" 301 0
+2024-11-02 20:07:26,361 - DEBUG - Starting new HTTPS connection (1): en.wikipedia.org:443
+2024-11-02 20:07:26,711 - DEBUG - https://en.wikipedia.org:443 "GET /w/api.php?prop=info%7Cpageprops&inprop=url&ppprop=disambiguation&redirects=&titles=plant&format=json&action=query HTTP/11" 200 286
+2024-11-02 20:07:26,714 - DEBUG - Starting new HTTP connection (1): en.wikipedia.org:80
+2024-11-02 20:07:26,832 - DEBUG - http://en.wikipedia.org:80 "GET /w/api.php?prop=extracts&explaintext=&titles=Plant&exintro=&format=json&action=query HTTP/11" 301 0
+2024-11-02 20:07:26,833 - DEBUG - Starting new HTTPS connection (1): en.wikipedia.org:443
+2024-11-02 20:07:27,161 - DEBUG - https://en.wikipedia.org:443 "GET /w/api.php?prop=extracts&explaintext=&titles=Plant&exintro=&format=json&action=query HTTP/11" 200 None
+2024-11-02 20:07:27,164 - DEBUG - Starting new HTTPS connection (1): api.rhymes.ai:443
+2024-11-02 20:07:30,088 - DEBUG - https://api.rhymes.ai:443 "POST /v1/chat/completions HTTP/11" 200 None
+2024-11-02 20:07:30,620 - INFO - 127.0.0.1 - - [02/Nov/2024 20:07:30] "POST /generate_summary HTTP/1.1" 200 -
+2024-11-02 20:07:31,482 - DEBUG - Starting new HTTPS connection (1): api.rhymes.ai:443
+2024-11-02 20:08:43,963 - DEBUG - Starting new HTTPS connection (1): ccg8bpswnk.sqlite.cloud:8090
+2024-11-02 20:08:44,713 - DEBUG - https://ccg8bpswnk.sqlite.cloud:8090 "POST /v2/weblite/sql HTTP/11" 200 361
+2024-11-02 20:08:44,717 - DEBUG - Starting new HTTPS connection (1): ccg8bpswnk.sqlite.cloud:8090
+2024-11-02 20:08:45,416 - DEBUG - https://ccg8bpswnk.sqlite.cloud:8090 "POST /v2/weblite/sql HTTP/11" 200 364
+2024-11-02 20:08:45,503 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-11-02 20:08:45,504 - INFO - [33mPress CTRL+C to quit[0m
+2024-11-02 20:08:45,530 - INFO -  * Restarting with watchdog (windowsapi)
+2024-11-02 20:08:47,222 - DEBUG - Starting new HTTPS connection (1): ccg8bpswnk.sqlite.cloud:8090
+2024-11-02 20:08:48,040 - DEBUG - https://ccg8bpswnk.sqlite.cloud:8090 "POST /v2/weblite/sql HTTP/11" 200 361
+2024-11-02 20:08:48,048 - DEBUG - Starting new HTTPS connection (1): ccg8bpswnk.sqlite.cloud:8090
+2024-11-02 20:08:48,821 - DEBUG - https://ccg8bpswnk.sqlite.cloud:8090 "POST /v2/weblite/sql HTTP/11" 200 365
+2024-11-02 20:08:48,872 - WARNING -  * Debugger is active!
+2024-11-02 20:08:48,887 - INFO -  * Debugger PIN: 623-743-118
+2024-11-02 20:08:48,932 - DEBUG - Starting new HTTPS connection (1): ccg8bpswnk.sqlite.cloud:8090
+2024-11-02 20:08:49,659 - DEBUG - https://ccg8bpswnk.sqlite.cloud:8090 "POST /v2/weblite/sql HTTP/11" 200 5621
+2024-11-02 20:08:49,721 - INFO - 127.0.0.1 - - [02/Nov/2024 20:08:49] "GET / HTTP/1.1" 200 -
+2024-11-02 20:08:50,299 - INFO - 127.0.0.1 - - [02/Nov/2024 20:08:50] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+2024-11-02 20:08:50,307 - INFO - 127.0.0.1 - - [02/Nov/2024 20:08:50] "[36mGET /static/js/map.js HTTP/1.1[0m" 304 -
+2024-11-02 20:08:50,326 - INFO - 127.0.0.1 - - [02/Nov/2024 20:08:50] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-11-02 20:08:50,350 - INFO - 127.0.0.1 - - [02/Nov/2024 20:08:50] "[36mGET /static/js/chat.js HTTP/1.1[0m" 304 -
+2024-11-02 20:08:50,714 - INFO - 127.0.0.1 - - [02/Nov/2024 20:08:50] "[36mGET /static/js/images.js HTTP/1.1[0m" 304 -
+2024-11-02 20:08:50,716 - INFO - 127.0.0.1 - - [02/Nov/2024 20:08:50] "[36mGET /static/js/overview.js HTTP/1.1[0m" 304 -
+2024-11-02 20:08:50,727 - INFO - 127.0.0.1 - - [02/Nov/2024 20:08:50] "[36mGET /static/js/video.js HTTP/1.1[0m" 304 -
+2024-11-02 20:08:50,731 - INFO - 127.0.0.1 - - [02/Nov/2024 20:08:50] "[36mGET /static/img/algae.png HTTP/1.1[0m" 304 -
+2024-11-02 20:08:51,180 - INFO - 127.0.0.1 - - [02/Nov/2024 20:08:51] "[36mGET /static/img/favicon/favicon.ico HTTP/1.1[0m" 304 -
+2024-11-02 20:08:51,267 - INFO - 127.0.0.1 - - [02/Nov/2024 20:08:51] "[36mGET /static/img/favicon/site.webmanifest HTTP/1.1[0m" 304 -
+2024-11-02 20:08:52,688 - DEBUG - Starting new HTTPS connection (1): google.serper.dev:443
+2024-11-02 20:08:53,462 - DEBUG - https://google.serper.dev:443 "POST /search HTTP/11" 200 5069
+2024-11-02 20:08:53,487 - DEBUG - Starting new HTTP connection (1): en.wikipedia.org:80
+2024-11-02 20:08:53,628 - DEBUG - http://en.wikipedia.org:80 "GET /w/api.php?list=search&srprop=&srlimit=1&limit=1&srsearch=Poland&srinfo=suggestion&format=json&action=query HTTP/11" 301 0
+2024-11-02 20:08:53,630 - DEBUG - Starting new HTTPS connection (1): en.wikipedia.org:443
+2024-11-02 20:08:54,128 - DEBUG - https://en.wikipedia.org:443 "GET /w/api.php?list=search&srprop=&srlimit=1&limit=1&srsearch=Poland&srinfo=suggestion&format=json&action=query HTTP/11" 200 196
+2024-11-02 20:08:54,131 - DEBUG - Starting new HTTP connection (1): en.wikipedia.org:80
+2024-11-02 20:08:54,252 - DEBUG - http://en.wikipedia.org:80 "GET /w/api.php?prop=info%7Cpageprops&inprop=url&ppprop=disambiguation&redirects=&titles=plant&format=json&action=query HTTP/11" 301 0
+2024-11-02 20:08:54,255 - DEBUG - Starting new HTTPS connection (1): en.wikipedia.org:443
+2024-11-02 20:08:54,589 - DEBUG - https://en.wikipedia.org:443 "GET /w/api.php?prop=info%7Cpageprops&inprop=url&ppprop=disambiguation&redirects=&titles=plant&format=json&action=query HTTP/11" 200 286
+2024-11-02 20:08:54,592 - DEBUG - Starting new HTTP connection (1): en.wikipedia.org:80
+2024-11-02 20:08:54,703 - DEBUG - http://en.wikipedia.org:80 "GET /w/api.php?prop=extracts&explaintext=&titles=Plant&exintro=&format=json&action=query HTTP/11" 301 0
+2024-11-02 20:08:54,706 - DEBUG - Starting new HTTPS connection (1): en.wikipedia.org:443
+2024-11-02 20:08:54,992 - DEBUG - https://en.wikipedia.org:443 "GET /w/api.php?prop=extracts&explaintext=&titles=Plant&exintro=&format=json&action=query HTTP/11" 200 None
+2024-11-02 20:08:54,996 - DEBUG - Starting new HTTPS connection (1): api.rhymes.ai:443
+2024-11-02 20:08:58,732 - DEBUG - https://api.rhymes.ai:443 "POST /v1/chat/completions HTTP/11" 200 None
+2024-11-02 20:08:58,733 - INFO - 127.0.0.1 - - [02/Nov/2024 20:08:58] "POST /generate_summary HTTP/1.1" 200 -
+2024-11-02 20:08:59,391 - DEBUG - Starting new HTTPS connection (1): api.rhymes.ai:443
+2024-11-02 20:09:02,959 - DEBUG - https://api.rhymes.ai:443 "POST /v1/chat/completions HTTP/11" 200 None
+2024-11-02 20:09:02,968 - DEBUG - Starting new HTTPS connection (1): api.imgbb.com:443
+2024-11-02 20:09:04,610 - DEBUG - https://api.imgbb.com:443 "POST /1/upload?key=77a1ea2630c7d58af94add227ced7180 HTTP/11" 200 None
+2024-11-02 20:09:05,585 - DEBUG - Starting new HTTPS connection (1): ccg8bpswnk.sqlite.cloud:8090
+2024-11-02 20:09:06,294 - DEBUG - https://ccg8bpswnk.sqlite.cloud:8090 "POST /v2/weblite/sql HTTP/11" 200 361
+2024-11-02 20:09:06,296 - INFO - 127.0.0.1 - - [02/Nov/2024 20:09:06] "POST /upload_images HTTP/1.1" 200 -
+2024-11-02 20:09:08,937 - INFO - 127.0.0.1 - - [02/Nov/2024 20:09:08] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-11-02 20:09:09,002 - INFO - 127.0.0.1 - - [02/Nov/2024 20:09:09] "[36mGET /static/img/favicon/site.webmanifest HTTP/1.1[0m" 304 -
+2024-11-02 20:11:33,115 - DEBUG - Starting new HTTPS connection (1): ccg8bpswnk.sqlite.cloud:8090
+2024-11-02 20:11:33,870 - DEBUG - https://ccg8bpswnk.sqlite.cloud:8090 "POST /v2/weblite/sql HTTP/11" 200 5621
+2024-11-02 20:11:33,881 - INFO - 127.0.0.1 - - [02/Nov/2024 20:11:33] "GET / HTTP/1.1" 200 -
+2024-11-02 20:11:33,966 - INFO - 127.0.0.1 - - [02/Nov/2024 20:11:33] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-11-02 20:11:34,023 - INFO - 127.0.0.1 - - [02/Nov/2024 20:11:34] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+2024-11-02 20:11:34,056 - INFO - 127.0.0.1 - - [02/Nov/2024 20:11:34] "[36mGET /static/js/map.js HTTP/1.1[0m" 304 -
+2024-11-02 20:11:34,063 - INFO - 127.0.0.1 - - [02/Nov/2024 20:11:34] "[36mGET /static/js/chat.js HTTP/1.1[0m" 304 -
+2024-11-02 20:11:35,851 - INFO - 127.0.0.1 - - [02/Nov/2024 20:11:35] "[36mGET /static/js/overview.js HTTP/1.1[0m" 304 -
+2024-11-02 20:11:35,860 - INFO - 127.0.0.1 - - [02/Nov/2024 20:11:35] "GET /static/js/images.js HTTP/1.1" 200 -
+2024-11-02 20:11:35,865 - INFO - 127.0.0.1 - - [02/Nov/2024 20:11:35] "[36mGET /static/js/video.js HTTP/1.1[0m" 304 -
+2024-11-02 20:11:36,315 - INFO - 127.0.0.1 - - [02/Nov/2024 20:11:36] "[36mGET /static/img/algae.png HTTP/1.1[0m" 304 -
+2024-11-02 20:11:37,335 - INFO - 127.0.0.1 - - [02/Nov/2024 20:11:37] "[36mGET /static/img/favicon/favicon.ico HTTP/1.1[0m" 304 -
+2024-11-02 20:11:37,824 - INFO - 127.0.0.1 - - [02/Nov/2024 20:11:37] "[36mGET /static/img/favicon/site.webmanifest HTTP/1.1[0m" 304 -
+2024-11-02 20:11:41,701 - DEBUG - Starting new HTTPS connection (1): google.serper.dev:443
+2024-11-02 20:11:42,978 - DEBUG - https://google.serper.dev:443 "POST /search HTTP/11" 200 5797
+2024-11-02 20:11:43,004 - DEBUG - Starting new HTTP connection (1): en.wikipedia.org:80
+2024-11-02 20:11:43,090 - DEBUG - http://en.wikipedia.org:80 "GET /w/api.php?list=search&srprop=&srlimit=1&limit=1&srsearch=Chennai&srinfo=suggestion&format=json&action=query HTTP/11" 301 0
+2024-11-02 20:11:43,092 - DEBUG - Starting new HTTPS connection (1): en.wikipedia.org:443
+2024-11-02 20:11:43,531 - DEBUG - https://en.wikipedia.org:443 "GET /w/api.php?list=search&srprop=&srlimit=1&limit=1&srsearch=Chennai&srinfo=suggestion&format=json&action=query HTTP/11" 200 163
+2024-11-02 20:11:43,537 - DEBUG - Starting new HTTP connection (1): en.wikipedia.org:80
+2024-11-02 20:11:43,644 - DEBUG - http://en.wikipedia.org:80 "GET /w/api.php?prop=info%7Cpageprops&inprop=url&ppprop=disambiguation&redirects=&titles=Chennai&format=json&action=query HTTP/11" 301 0
+2024-11-02 20:11:43,645 - DEBUG - Starting new HTTPS connection (1): en.wikipedia.org:443
+2024-11-02 20:11:43,957 - DEBUG - https://en.wikipedia.org:443 "GET /w/api.php?prop=info%7Cpageprops&inprop=url&ppprop=disambiguation&redirects=&titles=Chennai&format=json&action=query HTTP/11" 200 261
+2024-11-02 20:11:43,962 - DEBUG - Starting new HTTP connection (1): en.wikipedia.org:80
+2024-11-02 20:11:44,169 - DEBUG - http://en.wikipedia.org:80 "GET /w/api.php?prop=extracts&explaintext=&titles=Chennai&exintro=&format=json&action=query HTTP/11" 301 0
+2024-11-02 20:11:44,171 - DEBUG - Starting new HTTPS connection (1): en.wikipedia.org:443
+2024-11-02 20:11:44,483 - DEBUG - https://en.wikipedia.org:443 "GET /w/api.php?prop=extracts&explaintext=&titles=Chennai&exintro=&format=json&action=query HTTP/11" 200 None
+2024-11-02 20:11:44,488 - DEBUG - Starting new HTTPS connection (1): api.rhymes.ai:443
+2024-11-02 20:11:48,979 - DEBUG - Starting new HTTPS connection (1): api.rhymes.ai:443
+2024-11-02 20:11:49,694 - DEBUG - https://api.rhymes.ai:443 "POST /v1/chat/completions HTTP/11" 200 None
+2024-11-02 20:11:50,574 - INFO - 127.0.0.1 - - [02/Nov/2024 20:11:50] "POST /generate_summary HTTP/1.1" 200 -
+2024-11-02 20:11:51,680 - DEBUG - https://api.rhymes.ai:443 "POST /v1/chat/completions HTTP/11" 200 None
+2024-11-02 20:11:52,975 - DEBUG - Starting new HTTPS connection (1): api.imgbb.com:443
+2024-11-02 20:11:54,598 - DEBUG - https://api.imgbb.com:443 "POST /1/upload?key=77a1ea2630c7d58af94add227ced7180 HTTP/11" 200 None
+2024-11-02 20:11:55,662 - DEBUG - Starting new HTTPS connection (1): ccg8bpswnk.sqlite.cloud:8090
+2024-11-02 20:11:56,373 - DEBUG - https://ccg8bpswnk.sqlite.cloud:8090 "POST /v2/weblite/sql HTTP/11" 200 357
+2024-11-02 20:11:56,380 - INFO - 127.0.0.1 - - [02/Nov/2024 20:11:56] "POST /upload_images HTTP/1.1" 200 -
+2024-11-02 20:17:11,008 - DEBUG - Starting new HTTPS connection (1): ccg8bpswnk.sqlite.cloud:8090
+2024-11-02 20:17:11,824 - DEBUG - https://ccg8bpswnk.sqlite.cloud:8090 "POST /v2/weblite/sql HTTP/11" 200 5621
+2024-11-02 20:17:11,842 - INFO - 127.0.0.1 - - [02/Nov/2024 20:17:11] "GET / HTTP/1.1" 200 -
+2024-11-02 20:17:12,014 - INFO - 127.0.0.1 - - [02/Nov/2024 20:17:12] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-11-02 20:17:12,248 - INFO - 127.0.0.1 - - [02/Nov/2024 20:17:12] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+2024-11-02 20:17:12,273 - INFO - 127.0.0.1 - - [02/Nov/2024 20:17:12] "GET /static/js/map.js HTTP/1.1" 200 -
+2024-11-02 20:17:12,298 - INFO - 127.0.0.1 - - [02/Nov/2024 20:17:12] "[36mGET /static/js/chat.js HTTP/1.1[0m" 304 -
+2024-11-02 20:17:13,584 - INFO - 127.0.0.1 - - [02/Nov/2024 20:17:13] "[36mGET /static/js/overview.js HTTP/1.1[0m" 304 -
+2024-11-02 20:17:13,589 - INFO - 127.0.0.1 - - [02/Nov/2024 20:17:13] "GET /static/js/images.js HTTP/1.1" 200 -
+2024-11-02 20:17:13,618 - INFO - 127.0.0.1 - - [02/Nov/2024 20:17:13] "[36mGET /static/js/video.js HTTP/1.1[0m" 304 -
+2024-11-02 20:17:13,633 - INFO - 127.0.0.1 - - [02/Nov/2024 20:17:13] "[36mGET /static/img/algae.png HTTP/1.1[0m" 304 -
+2024-11-02 20:17:13,875 - INFO - 127.0.0.1 - - [02/Nov/2024 20:17:13] "[36mGET /static/img/favicon/favicon.ico HTTP/1.1[0m" 304 -
+2024-11-02 20:17:13,889 - INFO - 127.0.0.1 - - [02/Nov/2024 20:17:13] "[36mGET /static/img/favicon/site.webmanifest HTTP/1.1[0m" 304 -
+2024-11-02 20:17:16,141 - DEBUG - Starting new HTTPS connection (1): google.serper.dev:443
+2024-11-02 20:17:16,941 - DEBUG - https://google.serper.dev:443 "POST /search HTTP/11" 200 6016
+2024-11-02 20:17:16,968 - DEBUG - Starting new HTTPS connection (1): api.rhymes.ai:443
+2024-11-02 20:17:23,559 - DEBUG - Starting new HTTPS connection (1): api.rhymes.ai:443
+2024-11-02 20:17:25,236 - DEBUG - https://api.rhymes.ai:443 "POST /v1/chat/completions HTTP/11" 200 None
+2024-11-02 20:17:25,238 - INFO - 127.0.0.1 - - [02/Nov/2024 20:17:25] "POST /generate_summary HTTP/1.1" 200 -
+2024-11-02 20:17:32,420 - DEBUG - https://api.rhymes.ai:443 "POST /v1/chat/completions HTTP/11" 200 None
+2024-11-02 20:17:32,427 - DEBUG - Starting new HTTPS connection (1): api.imgbb.com:443
+2024-11-02 20:17:33,042 - DEBUG - https://api.imgbb.com:443 "POST /1/upload?key=77a1ea2630c7d58af94add227ced7180 HTTP/11" 200 None
+2024-11-02 20:17:33,052 - DEBUG - Starting new HTTPS connection (1): ccg8bpswnk.sqlite.cloud:8090
+2024-11-02 20:17:33,845 - DEBUG - https://ccg8bpswnk.sqlite.cloud:8090 "POST /v2/weblite/sql HTTP/11" 200 361
+2024-11-02 20:17:33,851 - INFO - 127.0.0.1 - - [02/Nov/2024 20:17:33] "POST /upload_images HTTP/1.1" 200 -
+2024-11-02 20:17:40,620 - INFO - 127.0.0.1 - - [02/Nov/2024 20:17:40] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-11-02 20:17:40,628 - INFO - 127.0.0.1 - - [02/Nov/2024 20:17:40] "[36mGET /static/img/favicon/site.webmanifest HTTP/1.1[0m" 304 -
+2024-11-02 20:20:01,078 - DEBUG - Starting new HTTPS connection (1): ccg8bpswnk.sqlite.cloud:8090
+2024-11-02 20:20:01,849 - DEBUG - https://ccg8bpswnk.sqlite.cloud:8090 "POST /v2/weblite/sql HTTP/11" 200 5621
+2024-11-02 20:20:01,875 - INFO - 127.0.0.1 - - [02/Nov/2024 20:20:01] "GET / HTTP/1.1" 200 -
+2024-11-02 20:20:01,956 - INFO - 127.0.0.1 - - [02/Nov/2024 20:20:01] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-11-02 20:20:01,983 - INFO - 127.0.0.1 - - [02/Nov/2024 20:20:01] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+2024-11-02 20:20:01,985 - INFO - 127.0.0.1 - - [02/Nov/2024 20:20:01] "[36mGET /static/js/map.js HTTP/1.1[0m" 304 -
+2024-11-02 20:20:01,987 - INFO - 127.0.0.1 - - [02/Nov/2024 20:20:01] "[36mGET /static/js/chat.js HTTP/1.1[0m" 304 -
+2024-11-02 20:20:02,756 - INFO - 127.0.0.1 - - [02/Nov/2024 20:20:02] "[36mGET /static/js/overview.js HTTP/1.1[0m" 304 -
+2024-11-02 20:20:02,763 - INFO - 127.0.0.1 - - [02/Nov/2024 20:20:02] "[36mGET /static/js/video.js HTTP/1.1[0m" 304 -
+2024-11-02 20:20:02,771 - INFO - 127.0.0.1 - - [02/Nov/2024 20:20:02] "GET /static/js/images.js HTTP/1.1" 200 -
+2024-11-02 20:20:02,776 - INFO - 127.0.0.1 - - [02/Nov/2024 20:20:02] "[36mGET /static/img/algae.png HTTP/1.1[0m" 304 -
+2024-11-02 20:20:03,133 - INFO - 127.0.0.1 - - [02/Nov/2024 20:20:03] "[36mGET /static/img/favicon/favicon.ico HTTP/1.1[0m" 304 -
+2024-11-02 20:20:03,139 - INFO - 127.0.0.1 - - [02/Nov/2024 20:20:03] "[36mGET /static/img/favicon/site.webmanifest HTTP/1.1[0m" 304 -
+2024-11-02 20:20:04,733 - DEBUG - Starting new HTTPS connection (1): google.serper.dev:443
+2024-11-02 20:20:05,774 - DEBUG - https://google.serper.dev:443 "POST /search HTTP/11" 200 4899
+2024-11-02 20:20:05,795 - DEBUG - Starting new HTTPS connection (1): api.rhymes.ai:443
+2024-11-02 20:20:16,368 - DEBUG - Starting new HTTPS connection (1): api.rhymes.ai:443
+2024-11-02 20:20:21,399 - DEBUG - https://api.rhymes.ai:443 "POST /v1/chat/completions HTTP/11" 200 None
+2024-11-02 20:20:21,406 - DEBUG - Starting new HTTPS connection (1): api.imgbb.com:443
+2024-11-02 20:20:21,536 - DEBUG - https://api.rhymes.ai:443 "POST /v1/chat/completions HTTP/11" 200 None
+2024-11-02 20:20:21,540 - INFO - 127.0.0.1 - - [02/Nov/2024 20:20:21] "POST /generate_summary HTTP/1.1" 200 -
+2024-11-02 20:20:46,414 - ERROR - Error processing image: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2024-11-02 20:20:46,417 - INFO - 127.0.0.1 - - [02/Nov/2024 20:20:46] "POST /upload_images HTTP/1.1" 200 -
+2024-11-02 20:22:51,627 - DEBUG - Starting new HTTPS connection (1): ccg8bpswnk.sqlite.cloud:8090
+2024-11-02 20:22:52,540 - DEBUG - https://ccg8bpswnk.sqlite.cloud:8090 "POST /v2/weblite/sql HTTP/11" 200 5621
+2024-11-02 20:22:52,556 - INFO - 127.0.0.1 - - [02/Nov/2024 20:22:52] "GET / HTTP/1.1" 200 -
+2024-11-02 20:22:52,595 - INFO - 127.0.0.1 - - [02/Nov/2024 20:22:52] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-11-02 20:22:52,636 - INFO - 127.0.0.1 - - [02/Nov/2024 20:22:52] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+2024-11-02 20:22:52,686 - INFO - 127.0.0.1 - - [02/Nov/2024 20:22:52] "[36mGET /static/js/map.js HTTP/1.1[0m" 304 -
+2024-11-02 20:22:52,690 - INFO - 127.0.0.1 - - [02/Nov/2024 20:22:52] "[36mGET /static/js/chat.js HTTP/1.1[0m" 304 -
+2024-11-02 20:22:53,452 - INFO - 127.0.0.1 - - [02/Nov/2024 20:22:53] "[36mGET /static/js/overview.js HTTP/1.1[0m" 304 -
+2024-11-02 20:22:53,528 - INFO - 127.0.0.1 - - [02/Nov/2024 20:22:53] "[36mGET /static/js/video.js HTTP/1.1[0m" 304 -
+2024-11-02 20:22:53,530 - INFO - 127.0.0.1 - - [02/Nov/2024 20:22:53] "GET /static/js/images.js HTTP/1.1" 200 -
+2024-11-02 20:22:53,545 - INFO - 127.0.0.1 - - [02/Nov/2024 20:22:53] "[36mGET /static/img/algae.png HTTP/1.1[0m" 304 -
+2024-11-02 20:22:54,022 - INFO - 127.0.0.1 - - [02/Nov/2024 20:22:54] "[36mGET /static/img/favicon/favicon.ico HTTP/1.1[0m" 304 -
+2024-11-02 20:22:54,086 - INFO - 127.0.0.1 - - [02/Nov/2024 20:22:54] "[36mGET /static/img/favicon/site.webmanifest HTTP/1.1[0m" 304 -
+2024-11-02 20:22:55,531 - DEBUG - Starting new HTTPS connection (1): google.serper.dev:443
+2024-11-02 20:22:56,855 - DEBUG - https://google.serper.dev:443 "POST /search HTTP/11" 200 5861
+2024-11-02 20:22:56,883 - DEBUG - Starting new HTTPS connection (1): api.rhymes.ai:443
+2024-11-02 20:23:00,813 - DEBUG - https://api.rhymes.ai:443 "POST /v1/chat/completions HTTP/11" 200 None
+2024-11-02 20:23:01,718 - INFO - 127.0.0.1 - - [02/Nov/2024 20:23:01] "POST /generate_summary HTTP/1.1" 200 -
+2024-11-02 20:23:01,802 - DEBUG - Starting new HTTPS connection (1): api.rhymes.ai:443
+2024-11-02 20:23:09,357 - DEBUG - https://api.rhymes.ai:443 "POST /v1/chat/completions HTTP/11" 200 None
+2024-11-02 20:23:09,360 - DEBUG - Starting new HTTPS connection (1): api.imgbb.com:443
+2024-11-02 20:23:12,757 - DEBUG - https://api.imgbb.com:443 "POST /1/upload?key=77a1ea2630c7d58af94add227ced7180 HTTP/11" 200 None
+2024-11-02 20:23:12,760 - DEBUG - Starting new HTTPS connection (1): ccg8bpswnk.sqlite.cloud:8090
+2024-11-02 20:23:13,457 - DEBUG - https://ccg8bpswnk.sqlite.cloud:8090 "POST /v2/weblite/sql HTTP/11" 200 361
+2024-11-02 20:23:13,464 - INFO - 127.0.0.1 - - [02/Nov/2024 20:23:13] "POST /upload_images HTTP/1.1" 200 -
+2024-11-02 20:25:05,700 - DEBUG - Starting new HTTPS connection (1): ccg8bpswnk.sqlite.cloud:8090
+2024-11-02 20:25:06,413 - DEBUG - https://ccg8bpswnk.sqlite.cloud:8090 "POST /v2/weblite/sql HTTP/11" 200 5621
+2024-11-02 20:25:06,428 - INFO - 127.0.0.1 - - [02/Nov/2024 20:25:06] "GET / HTTP/1.1" 200 -
+2024-11-02 20:25:06,483 - INFO - 127.0.0.1 - - [02/Nov/2024 20:25:06] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-11-02 20:25:06,489 - INFO - 127.0.0.1 - - [02/Nov/2024 20:25:06] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+2024-11-02 20:25:06,503 - INFO - 127.0.0.1 - - [02/Nov/2024 20:25:06] "[36mGET /static/js/map.js HTTP/1.1[0m" 304 -
+2024-11-02 20:25:06,513 - INFO - 127.0.0.1 - - [02/Nov/2024 20:25:06] "[36mGET /static/js/chat.js HTTP/1.1[0m" 304 -
+2024-11-02 20:25:07,380 - INFO - 127.0.0.1 - - [02/Nov/2024 20:25:07] "[36mGET /static/js/overview.js HTTP/1.1[0m" 304 -
+2024-11-02 20:25:07,387 - INFO - 127.0.0.1 - - [02/Nov/2024 20:25:07] "GET /static/js/images.js HTTP/1.1" 200 -
+2024-11-02 20:25:07,389 - INFO - 127.0.0.1 - - [02/Nov/2024 20:25:07] "GET /static/js/video.js HTTP/1.1" 200 -
+2024-11-02 20:25:07,408 - INFO - 127.0.0.1 - - [02/Nov/2024 20:25:07] "[36mGET /static/img/algae.png HTTP/1.1[0m" 304 -
+2024-11-02 20:25:07,638 - INFO - 127.0.0.1 - - [02/Nov/2024 20:25:07] "[36mGET /static/img/favicon/favicon.ico HTTP/1.1[0m" 304 -
+2024-11-02 20:25:07,756 - INFO - 127.0.0.1 - - [02/Nov/2024 20:25:07] "[36mGET /static/img/favicon/site.webmanifest HTTP/1.1[0m" 304 -
+2024-11-02 20:25:09,816 - DEBUG - Starting new HTTPS connection (1): google.serper.dev:443
+2024-11-02 20:25:10,557 - DEBUG - https://google.serper.dev:443 "POST /search HTTP/11" 200 6071
+2024-11-02 20:25:10,572 - DEBUG - Starting new HTTPS connection (1): api.rhymes.ai:443
+2024-11-02 20:25:13,926 - DEBUG - https://api.rhymes.ai:443 "POST /v1/chat/completions HTTP/11" 200 None
+2024-11-02 20:25:14,110 - INFO - 127.0.0.1 - - [02/Nov/2024 20:25:14] "POST /generate_summary HTTP/1.1" 200 -
+2024-11-02 20:25:17,781 - DEBUG - Starting new HTTPS connection (1): api.rhymes.ai:443
+2024-11-02 20:25:22,799 - DEBUG - https://api.rhymes.ai:443 "POST /v1/chat/completions HTTP/11" 200 None
+2024-11-02 20:25:22,803 - DEBUG - Starting new HTTPS connection (1): api.imgbb.com:443
+2024-11-02 20:25:23,479 - DEBUG - https://api.imgbb.com:443 "POST /1/upload?key=77a1ea2630c7d58af94add227ced7180 HTTP/11" 200 None
+2024-11-02 20:25:23,486 - DEBUG - Starting new HTTPS connection (1): ccg8bpswnk.sqlite.cloud:8090
+2024-11-02 20:25:24,227 - DEBUG - https://ccg8bpswnk.sqlite.cloud:8090 "POST /v2/weblite/sql HTTP/11" 200 361
+2024-11-02 20:25:24,232 - INFO - 127.0.0.1 - - [02/Nov/2024 20:25:24] "POST /upload_images HTTP/1.1" 200 -
+2024-11-02 20:25:58,288 - DEBUG - Starting new HTTPS connection (1): ccg8bpswnk.sqlite.cloud:8090
+2024-11-02 20:25:59,165 - DEBUG - https://ccg8bpswnk.sqlite.cloud:8090 "POST /v2/weblite/sql HTTP/11" 200 5622
+2024-11-02 20:25:59,181 - INFO - 127.0.0.1 - - [02/Nov/2024 20:25:59] "GET / HTTP/1.1" 200 -
+2024-11-02 20:25:59,239 - INFO - 127.0.0.1 - - [02/Nov/2024 20:25:59] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-11-02 20:25:59,241 - INFO - 127.0.0.1 - - [02/Nov/2024 20:25:59] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+2024-11-02 20:25:59,268 - INFO - 127.0.0.1 - - [02/Nov/2024 20:25:59] "[36mGET /static/js/map.js HTTP/1.1[0m" 304 -
+2024-11-02 20:25:59,271 - INFO - 127.0.0.1 - - [02/Nov/2024 20:25:59] "[36mGET /static/js/chat.js HTTP/1.1[0m" 304 -
+2024-11-02 20:26:00,015 - INFO - 127.0.0.1 - - [02/Nov/2024 20:26:00] "[36mGET /static/js/overview.js HTTP/1.1[0m" 304 -
+2024-11-02 20:26:00,019 - INFO - 127.0.0.1 - - [02/Nov/2024 20:26:00] "[36mGET /static/js/images.js HTTP/1.1[0m" 304 -
+2024-11-02 20:26:00,033 - INFO - 127.0.0.1 - - [02/Nov/2024 20:26:00] "[36mGET /static/js/video.js HTTP/1.1[0m" 304 -
+2024-11-02 20:26:00,197 - INFO - 127.0.0.1 - - [02/Nov/2024 20:26:00] "[36mGET /static/img/algae.png HTTP/1.1[0m" 304 -
+2024-11-02 20:26:00,894 - INFO - 127.0.0.1 - - [02/Nov/2024 20:26:00] "[36mGET /static/img/favicon/favicon.ico HTTP/1.1[0m" 304 -
+2024-11-02 20:26:00,903 - INFO - 127.0.0.1 - - [02/Nov/2024 20:26:00] "[36mGET /static/img/favicon/site.webmanifest HTTP/1.1[0m" 304 -
+2024-11-02 20:26:02,318 - DEBUG - Starting new HTTPS connection (1): google.serper.dev:443
+2024-11-02 20:26:03,015 - DEBUG - https://google.serper.dev:443 "POST /search HTTP/11" 200 5069
+2024-11-02 20:26:03,028 - DEBUG - Starting new HTTPS connection (1): api.rhymes.ai:443
+2024-11-02 20:26:05,982 - DEBUG - https://api.rhymes.ai:443 "POST /v1/chat/completions HTTP/11" 200 None
+2024-11-02 20:26:05,984 - INFO - 127.0.0.1 - - [02/Nov/2024 20:26:05] "POST /generate_summary HTTP/1.1" 200 -
+2024-11-02 20:28:32,985 - DEBUG - Starting new HTTPS connection (1): ccg8bpswnk.sqlite.cloud:8090
+2024-11-02 20:28:33,727 - DEBUG - https://ccg8bpswnk.sqlite.cloud:8090 "POST /v2/weblite/sql HTTP/11" 200 5621
+2024-11-02 20:28:33,743 - INFO - 127.0.0.1 - - [02/Nov/2024 20:28:33] "GET / HTTP/1.1" 200 -
+2024-11-02 20:28:33,808 - INFO - 127.0.0.1 - - [02/Nov/2024 20:28:33] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-11-02 20:28:33,839 - INFO - 127.0.0.1 - - [02/Nov/2024 20:28:33] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+2024-11-02 20:28:33,853 - INFO - 127.0.0.1 - - [02/Nov/2024 20:28:33] "[36mGET /static/js/map.js HTTP/1.1[0m" 304 -
+2024-11-02 20:28:33,854 - INFO - 127.0.0.1 - - [02/Nov/2024 20:28:33] "[36mGET /static/js/chat.js HTTP/1.1[0m" 304 -
+2024-11-02 20:28:34,564 - INFO - 127.0.0.1 - - [02/Nov/2024 20:28:34] "[36mGET /static/js/overview.js HTTP/1.1[0m" 304 -
+2024-11-02 20:28:34,571 - INFO - 127.0.0.1 - - [02/Nov/2024 20:28:34] "GET /static/js/images.js HTTP/1.1" 200 -
+2024-11-02 20:28:34,573 - INFO - 127.0.0.1 - - [02/Nov/2024 20:28:34] "GET /static/js/video.js HTTP/1.1" 200 -
+2024-11-02 20:28:34,982 - INFO - 127.0.0.1 - - [02/Nov/2024 20:28:34] "[36mGET /static/img/algae.png HTTP/1.1[0m" 304 -
+2024-11-02 20:28:35,616 - INFO - 127.0.0.1 - - [02/Nov/2024 20:28:35] "[36mGET /static/img/favicon/favicon.ico HTTP/1.1[0m" 304 -
+2024-11-02 20:28:35,679 - INFO - 127.0.0.1 - - [02/Nov/2024 20:28:35] "[36mGET /static/img/favicon/site.webmanifest HTTP/1.1[0m" 304 -
+2024-11-02 20:28:40,564 - DEBUG - Starting new HTTPS connection (1): google.serper.dev:443
+2024-11-02 20:28:41,230 - DEBUG - https://google.serper.dev:443 "POST /search HTTP/11" 200 5871
+2024-11-02 20:28:41,260 - DEBUG - Starting new HTTPS connection (1): api.rhymes.ai:443
+2024-11-02 20:28:45,326 - DEBUG - https://api.rhymes.ai:443 "POST /v1/chat/completions HTTP/11" 200 None
+2024-11-02 20:28:45,625 - INFO - 127.0.0.1 - - [02/Nov/2024 20:28:45] "POST /generate_summary HTTP/1.1" 200 -
+2024-11-02 20:28:46,704 - DEBUG - Starting new HTTPS connection (1): api.rhymes.ai:443
+2024-11-02 20:28:51,367 - DEBUG - https://api.rhymes.ai:443 "POST /v1/chat/completions HTTP/11" 200 None
+2024-11-02 20:28:52,404 - DEBUG - Starting new HTTPS connection (1): api.imgbb.com:443
+2024-11-02 20:28:53,401 - DEBUG - https://api.imgbb.com:443 "POST /1/upload?key=77a1ea2630c7d58af94add227ced7180 HTTP/11" 200 None
+2024-11-02 20:28:54,005 - DEBUG - Starting new HTTPS connection (1): ccg8bpswnk.sqlite.cloud:8090
+2024-11-02 20:28:54,805 - DEBUG - https://ccg8bpswnk.sqlite.cloud:8090 "POST /v2/weblite/sql HTTP/11" 200 361
+2024-11-02 20:28:54,808 - INFO - 127.0.0.1 - - [02/Nov/2024 20:28:54] "POST /upload_images HTTP/1.1" 200 -
+2024-11-02 20:29:25,352 - DEBUG - Starting new HTTPS connection (1): ccg8bpswnk.sqlite.cloud:8090
+2024-11-02 20:29:26,077 - DEBUG - https://ccg8bpswnk.sqlite.cloud:8090 "POST /v2/weblite/sql HTTP/11" 200 5621
+2024-11-02 20:29:26,099 - INFO - 127.0.0.1 - - [02/Nov/2024 20:29:26] "GET / HTTP/1.1" 200 -
+2024-11-02 20:29:26,203 - INFO - 127.0.0.1 - - [02/Nov/2024 20:29:26] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2024-11-02 20:29:26,237 - INFO - 127.0.0.1 - - [02/Nov/2024 20:29:26] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+2024-11-02 20:29:26,241 - INFO - 127.0.0.1 - - [02/Nov/2024 20:29:26] "[36mGET /static/js/chat.js HTTP/1.1[0m" 304 -
+2024-11-02 20:29:26,242 - INFO - 127.0.0.1 - - [02/Nov/2024 20:29:26] "GET /static/js/map.js HTTP/1.1" 200 -
+2024-11-02 20:29:26,946 - INFO - 127.0.0.1 - - [02/Nov/2024 20:29:26] "[36mGET /static/js/images.js HTTP/1.1[0m" 304 -
+2024-11-02 20:29:26,947 - INFO - 127.0.0.1 - - [02/Nov/2024 20:29:26] "[36mGET /static/js/overview.js HTTP/1.1[0m" 304 -
+2024-11-02 20:29:26,952 - INFO - 127.0.0.1 - - [02/Nov/2024 20:29:26] "[36mGET /static/js/video.js HTTP/1.1[0m" 304 -
+2024-11-02 20:29:26,983 - INFO - 127.0.0.1 - - [02/Nov/2024 20:29:26] "[36mGET /static/img/algae.png HTTP/1.1[0m" 304 -
+2024-11-02 20:29:27,422 - INFO - 127.0.0.1 - - [02/Nov/2024 20:29:27] "[36mGET /static/img/favicon/favicon.ico HTTP/1.1[0m" 304 -
+2024-11-02 20:29:27,443 - INFO - 127.0.0.1 - - [02/Nov/2024 20:29:27] "[36mGET /static/img/favicon/site.webmanifest HTTP/1.1[0m" 304 -
+2024-11-02 20:29:28,481 - DEBUG - Starting new HTTPS connection (1): google.serper.dev:443
+2024-11-02 20:29:29,287 - DEBUG - https://google.serper.dev:443 "POST /search HTTP/11" 200 5069
+2024-11-02 20:29:29,310 - DEBUG - Starting new HTTPS connection (1): api.rhymes.ai:443
+2024-11-02 20:29:33,546 - DEBUG - https://api.rhymes.ai:443 "POST /v1/chat/completions HTTP/11" 200 None
+2024-11-02 20:29:33,548 - INFO - 127.0.0.1 - - [02/Nov/2024 20:29:33] "POST /generate_summary HTTP/1.1" 200 -
+2024-11-02 20:30:05,523 - DEBUG - Starting new HTTPS connection (1): api.rhymes.ai:443
+2024-11-02 20:30:08,263 - DEBUG - https://api.rhymes.ai:443 "POST /v1/chat/completions HTTP/11" 200 None
+2024-11-02 20:30:08,397 - DEBUG - Starting new HTTPS connection (1): api.imgbb.com:443
+2024-11-02 20:30:09,113 - DEBUG - https://api.imgbb.com:443 "POST /1/upload?key=77a1ea2630c7d58af94add227ced7180 HTTP/11" 200 None
+2024-11-02 20:30:09,262 - DEBUG - Starting new HTTPS connection (1): ccg8bpswnk.sqlite.cloud:8090
+2024-11-02 20:30:10,122 - DEBUG - https://ccg8bpswnk.sqlite.cloud:8090 "POST /v2/weblite/sql HTTP/11" 200 361
+2024-11-02 20:30:10,125 - INFO - 127.0.0.1 - - [02/Nov/2024 20:30:10] "POST /upload_images HTTP/1.1" 200 -
+2024-11-02 20:33:19,369 - INFO -  * Detected change in 'C:\\arvind\\code\\pyqt5\\aa\\app.py', reloading
+2024-11-02 20:33:19,370 - INFO -  * Detected change in 'C:\\arvind\\code\\pyqt5\\aa\\app.py', reloading
+2024-11-02 20:33:19,371 - INFO -  * Detected change in 'C:\\arvind\\code\\pyqt5\\aa\\app.py', reloading
+2024-11-02 20:33:19,373 - INFO -  * Detected change in 'C:\\arvind\\code\\pyqt5\\aa\\app.py', reloading
+2024-11-02 20:33:19,749 - INFO -  * Restarting with watchdog (windowsapi)
+2024-11-02 20:45:12,360 - DEBUG - Starting new HTTPS connection (1): ccg8bpswnk.sqlite.cloud:8090
+2024-11-02 20:45:13,126 - DEBUG - https://ccg8bpswnk.sqlite.cloud:8090 "POST /v2/weblite/sql HTTP/11" 200 361
+2024-11-02 20:45:13,131 - DEBUG - Starting new HTTPS connection (1): ccg8bpswnk.sqlite.cloud:8090
+2024-11-02 20:45:13,882 - DEBUG - https://ccg8bpswnk.sqlite.cloud:8090 "POST /v2/weblite/sql HTTP/11" 200 365
+2024-11-02 20:45:13,963 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-11-02 20:45:13,963 - INFO - [33mPress CTRL+C to quit[0m
+2024-11-02 20:45:13,997 - INFO -  * Restarting with watchdog (windowsapi)
+2024-11-02 20:45:22,616 - DEBUG - Starting new HTTPS connection (1): ccg8bpswnk.sqlite.cloud:8090
+2024-11-02 20:45:23,343 - DEBUG - https://ccg8bpswnk.sqlite.cloud:8090 "POST /v2/weblite/sql HTTP/11" 200 361
+2024-11-02 20:45:23,349 - DEBUG - Starting new HTTPS connection (1): ccg8bpswnk.sqlite.cloud:8090
+2024-11-02 20:45:24,172 - DEBUG - https://ccg8bpswnk.sqlite.cloud:8090 "POST /v2/weblite/sql HTTP/11" 200 365
+2024-11-02 20:45:24,219 - WARNING -  * Debugger is active!
+2024-11-02 20:45:24,230 - INFO -  * Debugger PIN: 623-743-118
+2024-11-02 20:45:33,608 - INFO -  * Detected change in 'C:\\Python312\\Lib\\site-packages\\flask\\templating.py', reloading
+2024-11-02 20:45:33,809 - INFO -  * Detected change in 'C:\\Python312\\Lib\\logging\\__init__.py', reloading
+2024-11-02 20:45:34,390 - INFO -  * Restarting with watchdog (windowsapi)
+2024-11-02 20:48:03,963 - DEBUG - Starting new HTTPS connection (1): ccg8bpswnk.sqlite.cloud:8090
+2024-11-02 20:48:04,701 - DEBUG - https://ccg8bpswnk.sqlite.cloud:8090 "POST /v2/weblite/sql HTTP/11" 200 361
+2024-11-02 20:48:04,704 - DEBUG - Starting new HTTPS connection (1): ccg8bpswnk.sqlite.cloud:8090
+2024-11-02 20:48:05,438 - DEBUG - https://ccg8bpswnk.sqlite.cloud:8090 "POST /v2/weblite/sql HTTP/11" 200 364
+2024-11-02 20:48:05,525 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-11-02 20:48:05,525 - INFO - [33mPress CTRL+C to quit[0m
+2024-11-02 20:48:05,560 - INFO -  * Restarting with watchdog (windowsapi)
+2024-11-02 20:48:07,284 - DEBUG - Starting new HTTPS connection (1): ccg8bpswnk.sqlite.cloud:8090
+2024-11-02 20:48:08,043 - DEBUG - https://ccg8bpswnk.sqlite.cloud:8090 "POST /v2/weblite/sql HTTP/11" 200 361
+2024-11-02 20:48:08,046 - DEBUG - Starting new HTTPS connection (1): ccg8bpswnk.sqlite.cloud:8090
+2024-11-02 20:48:08,806 - DEBUG - https://ccg8bpswnk.sqlite.cloud:8090 "POST /v2/weblite/sql HTTP/11" 200 365
+2024-11-02 20:48:08,845 - WARNING -  * Debugger is active!
+2024-11-02 20:48:08,857 - INFO -  * Debugger PIN: 623-743-118
+2024-11-02 20:48:50,280 - INFO -  * Detected change in 'C:\\arvind\\code\\pyqt5\\aa\\poll.py', reloading
+2024-11-02 20:48:51,196 - INFO -  * Restarting with watchdog (windowsapi)
+2024-11-02 20:48:52,909 - DEBUG - Starting new HTTPS connection (1): ccg8bpswnk.sqlite.cloud:8090
+2024-11-02 20:48:53,839 - DEBUG - https://ccg8bpswnk.sqlite.cloud:8090 "POST /v2/weblite/sql HTTP/11" 200 361
+2024-11-02 20:48:53,841 - DEBUG - Starting new HTTPS connection (1): ccg8bpswnk.sqlite.cloud:8090
+2024-11-02 20:48:54,581 - DEBUG - https://ccg8bpswnk.sqlite.cloud:8090 "POST /v2/weblite/sql HTTP/11" 200 364
+2024-11-02 20:48:54,623 - WARNING -  * Debugger is active!
+2024-11-02 20:48:54,635 - INFO -  * Debugger PIN: 623-743-118
+2024-11-02 20:49:21,291 - DEBUG - Starting new HTTPS connection (1): ccg8bpswnk.sqlite.cloud:8090
+2024-11-02 20:49:22,205 - DEBUG - https://ccg8bpswnk.sqlite.cloud:8090 "POST /v2/weblite/sql HTTP/11" 200 361
+2024-11-02 20:49:22,208 - DEBUG - Starting new HTTPS connection (1): ccg8bpswnk.sqlite.cloud:8090
+2024-11-02 20:49:22,970 - DEBUG - https://ccg8bpswnk.sqlite.cloud:8090 "POST /v2/weblite/sql HTTP/11" 200 365
+2024-11-02 20:49:23,040 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-11-02 20:49:23,040 - INFO - [33mPress CTRL+C to quit[0m
+2024-11-02 20:49:23,068 - INFO -  * Restarting with watchdog (windowsapi)
+2024-11-02 20:49:24,685 - DEBUG - Starting new HTTPS connection (1): ccg8bpswnk.sqlite.cloud:8090
+2024-11-02 20:49:25,598 - DEBUG - https://ccg8bpswnk.sqlite.cloud:8090 "POST /v2/weblite/sql HTTP/11" 200 361
+2024-11-02 20:49:25,604 - DEBUG - Starting new HTTPS connection (1): ccg8bpswnk.sqlite.cloud:8090
+2024-11-02 20:49:26,409 - DEBUG - https://ccg8bpswnk.sqlite.cloud:8090 "POST /v2/weblite/sql HTTP/11" 200 364
+2024-11-02 20:49:26,462 - WARNING -  * Debugger is active!
+2024-11-02 20:49:26,477 - INFO -  * Debugger PIN: 623-743-118
+2024-11-02 20:49:56,419 - DEBUG - Starting new HTTPS connection (1): ccg8bpswnk.sqlite.cloud:8090
+2024-11-02 20:49:57,182 - DEBUG - https://ccg8bpswnk.sqlite.cloud:8090 "POST /v2/weblite/sql HTTP/11" 200 361
+2024-11-02 20:49:57,188 - DEBUG - Starting new HTTPS connection (1): ccg8bpswnk.sqlite.cloud:8090
+2024-11-02 20:49:57,939 - DEBUG - https://ccg8bpswnk.sqlite.cloud:8090 "POST /v2/weblite/sql HTTP/11" 200 364
+2024-11-02 20:49:58,027 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-11-02 20:49:58,027 - INFO - [33mPress CTRL+C to quit[0m
+2024-11-02 20:49:58,056 - INFO -  * Restarting with watchdog (windowsapi)
+2024-11-02 20:49:59,703 - DEBUG - Starting new HTTPS connection (1): ccg8bpswnk.sqlite.cloud:8090
+2024-11-02 20:50:00,543 - DEBUG - https://ccg8bpswnk.sqlite.cloud:8090 "POST /v2/weblite/sql HTTP/11" 200 361
+2024-11-02 20:50:00,550 - DEBUG - Starting new HTTPS connection (1): ccg8bpswnk.sqlite.cloud:8090
+2024-11-02 20:50:01,479 - DEBUG - https://ccg8bpswnk.sqlite.cloud:8090 "POST /v2/weblite/sql HTTP/11" 200 365
+2024-11-02 20:50:01,548 - WARNING -  * Debugger is active!
+2024-11-02 20:50:01,563 - INFO -  * Debugger PIN: 623-743-118
+2024-11-02 20:50:09,216 - INFO -  * Detected change in 'C:\\arvind\\code\\pyqt5\\aa\\app.py', reloading
+2024-11-02 20:50:09,240 - INFO -  * Detected change in 'C:\\arvind\\code\\pyqt5\\aa\\app.py', reloading
+2024-11-02 20:50:09,479 - INFO -  * Detected change in 'C:\\arvind\\code\\pyqt5\\aa\\app.py', reloading
+2024-11-02 20:50:09,480 - INFO -  * Detected change in 'C:\\arvind\\code\\pyqt5\\aa\\app.py', reloading
+2024-11-02 20:50:09,480 - INFO -  * Detected change in 'C:\\arvind\\code\\pyqt5\\aa\\app.py', reloading
+2024-11-02 20:50:09,720 - INFO -  * Restarting with watchdog (windowsapi)
